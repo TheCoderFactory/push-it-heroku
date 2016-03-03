@@ -2,13 +2,27 @@
 
 <div class="col-md-4">
 	<ol>
+		<h3>Adjusting Gems</h3>
+		<li>
+			group :development, :test do
+				gem 'sqlite3'
+  			gem 'byebug'
+  		end
+  	</li>
+		<li>
+			group :production do
+				gem 'pg'
+				gem 'rails_12factor'
+			end
+		</li>
+		<li>Run bundle, it pg doesn't install, run bundle --without production</li>
 		<h3>Git</h3>
-		<li>Initialize your git repo (git init)</li>
+		<li>Initialize your git repo - git init</li>
 		<li>git add .</li>
 		<li>git commit -m "Commit message here"</li>
 		<li>Create a Github repo</li>
-		<li>Add the github repo remote</li>
-		<li>Push to your new repo</li>
+		<li>Add the github repo remote - git remote add origin git@github.com:TheCoderFactory/push-it-heroku.git</li>
+		<li>Push to your new repo - git push -u origin master</li>
 		<h3>Heroku</h3>
 		<li>Create a Heroku app</li>
 		<li>Add the Heroku remote</li>
